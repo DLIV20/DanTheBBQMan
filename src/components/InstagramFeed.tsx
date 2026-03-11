@@ -1,6 +1,8 @@
-export default function InstagramFeed() {
-  const placeholders = Array.from({ length: 9 })
+'use client'
 
+import Script from 'next/script'
+
+export default function InstagramFeed() {
   return (
     <section className="py-16 px-6">
       <div className="max-w-6xl mx-auto">
@@ -16,19 +18,9 @@ export default function InstagramFeed() {
           </a>
         </div>
 
-        <div className="grid grid-cols-3 md:grid-cols-9 gap-1">
-          {placeholders.map((_, i) => (
-            <a
-              key={i}
-              href="https://instagram.com/danthebbqman"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="aspect-square bg-gray-100 hover:opacity-80 transition-opacity overflow-hidden block"
-            >
-              <div className="w-full h-full bg-gray-200" />
-            </a>
-          ))}
-        </div>
+        {/* @ts-expect-error behold-widget is a custom element */}
+        <behold-widget feed-id="KIUh1CYnmZGEc2VrCpvG"></behold-widget>
+        <Script src="https://w.behold.so/widget.js" type="module" strategy="lazyOnload" />
       </div>
     </section>
   )
