@@ -19,7 +19,7 @@ export default function Home() {
             <span className="text-brand-green">Just Smoke.</span>
           </h1>
           <p className="font-serif text-xl text-gray-500 mb-8 max-w-md">
-            Recipes, reviews, and road trips from a guy who takes BBQ very seriously.
+            Where the Crescent City Eats.
           </p>
           <Link
             href="/blog"
