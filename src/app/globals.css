@@ -12,9 +12,9 @@
 @layer base {
   body {
     background-color: #ffffff;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49'%3E%3Cpath fill='none' stroke='%23e2e8f0' stroke-width='1' d='M14 1 L27 8.5 L27 23.5 L14 31 L1 23.5 L1 8.5 Z M27 23.5 L28 24 M1 23.5 L0 24 M14 31 L14 49 M14 31 L27 38.5 M14 31 L1 38.5'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cpath fill='none' stroke='%23d1d5db' stroke-width='1' d='M12 4 L12 20 M4 12 L20 12'/%3E%3C/svg%3E");
     background-repeat: repeat;
-    background-size: 28px 49px;
+    background-size: 24px 24px;
     color: #111111;
     font-family: var(--font-serif);
   }
