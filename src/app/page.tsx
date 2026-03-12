@@ -32,7 +32,7 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="flex-1 flex justify-center">
+        <div className="flex-[3] flex justify-center">
           <Image
             src="/logos/logo-dark.png"
             alt="DanTheBBQMan"
