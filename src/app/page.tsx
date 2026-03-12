@@ -32,9 +32,9 @@ export default function Home() {
           <Image
             src="/logos/logo-dark.png"
             alt="DanTheBBQMan"
-            width={400}
-            height={300}
-            className="w-full max-w-sm opacity-90"
+            width={600}
+            height={450}
+            className="w-full max-w-lg opacity-90"
           />
         </div>
       </section>
