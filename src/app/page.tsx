@@ -2,15 +2,21 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { getAllPosts } from '@/lib/posts'
 import PostCard from '@/components/PostCard'
+import FeaturedPost from '@/components/FeaturedPost'
 import EmailSignup from '@/components/EmailSignup'
-import AboutStrip from '@/components/AboutStrip'
 import InstagramFeed from '@/components/InstagramFeed'
+import NowEating from '@/components/NowEating'
+import FadeIn from '@/components/FadeIn'
 
 export default function Home() {
-  const featured = getAllPosts().slice(0, 3)
+  const allPosts = getAllPosts()
+  const featuredPost = allPosts[0]
+  const remaining = allPosts.slice(1, 4)
 
   return (
     <>
+      <NowEating city="New Orleans, LA" />
+
       {/* Hero */}
       <section className="max-w-6xl mx-auto px-6 py-24 flex flex-col md:flex-row items-center gap-16">
         <div className="flex-1">
@@ -39,12 +45,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Posts */}
-      <section className="max-w-6xl mx-auto px-6 py-16">
+      {/* Featured Post Hero */}
+      <section className="max-w-6xl mx-auto px-6">
+        <FadeIn>
+          {featuredPost && <FeaturedPost post={featuredPost} />}
+        </FadeIn>
+      </section>
+
+      {/* Latest Posts Grid */}
+      <section className="max-w-6xl mx-auto px-6 pb-16">
         <h2 className="font-sans font-black text-3xl mb-10">Latest Posts</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {featured.map(post => (
-            <PostCard key={post.slug} post={post} />
+          {remaining.map((post, i) => (
+            <FadeIn key={post.slug} className={`transition-delay-${i * 100}`}>
+              <PostCard post={post} />
+            </FadeIn>
           ))}
         </div>
         <div className="mt-12 text-center">
@@ -57,8 +72,12 @@ export default function Home() {
         </div>
       </section>
 
-      <InstagramFeed />
-      <EmailSignup />
+      <FadeIn>
+        <InstagramFeed />
+      </FadeIn>
+      <FadeIn>
+        <EmailSignup />
+      </FadeIn>
     </>
   )
 }

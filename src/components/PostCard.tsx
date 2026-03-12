@@ -10,7 +10,7 @@ const CATEGORY_COLORS: Record<string, string> = {
 
 export default function PostCard({ post }: { post: Post }) {
   return (
-    <Link href={`/blog/${post.slug}`} className="group block">
+    <Link href={`/blog/${post.slug}`} className="group block hover:-translate-y-1 transition-transform duration-200">
       <div className="overflow-hidden rounded-sm mb-4 bg-gray-100 aspect-[4/3]">
         {post.coverImage ? (
           <img
