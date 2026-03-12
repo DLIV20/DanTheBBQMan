@@ -57,9 +57,9 @@ export default function Home() {
         </div>
       </section>
 
+      <InstagramFeed />
       <AboutStrip />
       <EmailSignup />
-      <InstagramFeed />
     </>
   )
 }
