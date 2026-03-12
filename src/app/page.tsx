@@ -39,8 +39,6 @@ export default function Home() {
         </div>
       </section>
 
-      <AboutStrip />
-
       {/* Featured Posts */}
       <section className="max-w-6xl mx-auto px-6 py-16">
         <h2 className="font-sans font-black text-3xl mb-10">Latest Posts</h2>
