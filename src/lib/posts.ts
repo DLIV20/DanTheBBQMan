@@ -14,6 +14,25 @@ export type Post = {
   readTime: string
 }
 
+export function getPostBySlug(slug: string): { post: Post; content: string } | null {
+  const filePath = path.join(postsDir, `${slug}.mdx`)
+  if (!fs.existsSync(filePath)) return null
+  const raw = fs.readFileSync(filePath, 'utf8')
+  const { data, content } = matter(raw)
+  return {
+    post: {
+      slug,
+      title: data.title,
+      date: data.date,
+      category: data.category,
+      excerpt: data.excerpt,
+      coverImage: data.coverImage ?? '',
+      readTime: data.readTime,
+    },
+    content,
+  }
+}
+
 export function getAllPosts(): Post[] {
   const files = fs.readdirSync(postsDir).filter(f => f.endsWith('.mdx'))
 
