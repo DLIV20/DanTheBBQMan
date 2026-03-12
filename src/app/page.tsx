@@ -15,8 +15,6 @@ export default function Home() {
 
   return (
     <>
-      <NowEating city="New Orleans, LA" />
-
       {/* Hero */}
       <section className="max-w-6xl mx-auto px-6 py-24 flex flex-col md:flex-row items-center gap-16">
         <div className="flex-1">
@@ -77,6 +75,9 @@ export default function Home() {
       </FadeIn>
       <FadeIn>
         <EmailSignup />
+      </FadeIn>
+      <FadeIn>
+        <NowEating city="New Orleans, LA" />
       </FadeIn>
     </>
   )
