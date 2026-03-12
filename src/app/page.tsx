@@ -17,9 +17,9 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="max-w-6xl mx-auto px-6 py-24 flex flex-col md:flex-row items-center gap-16">
-        <div className="flex-1">
+        <div className="flex-[2]">
           <h1 className="font-sans font-black text-6xl md:text-7xl leading-none mb-6">
-            <span className="text-brand-green">Every Bite Counts.</span>
+            <span className="text-brand-green">Every Bite<br />Counts.</span>
           </h1>
           <p className="font-serif text-xl text-gray-500 mb-8 max-w-md">
             Where the Crescent City Eats.
