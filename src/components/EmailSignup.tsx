@@ -32,7 +32,7 @@ export default function EmailSignup() {
               value={email}
               onChange={e => setEmail(e.target.value)}
               placeholder="your@email.com"
-              className="flex-1 max-w-sm px-5 py-3 rounded-full text-brand-black font-sans text-sm focus:outline-none focus:ring-2 focus:ring-white"
+              className="flex-1 max-w-sm px-5 py-3 rounded-full font-sans text-sm text-white bg-white/15 border border-white/30 focus:outline-none focus:ring-2 focus:ring-white placeholder:text-white/60"
             />
             <button
               type="submit"
